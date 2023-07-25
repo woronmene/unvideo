@@ -1,0 +1,13 @@
+@import "mixins";
+@import "functions";
+@import "variables";
+
+.globalContainer {
+  margin: 0 auto;
+  max-width: 1800px;
+  // border: 1px solid red;
+
+  // @include fullMaxBreakPoint {
+  //   max-width: 80vw;
+  // }
+}
