@@ -1,21 +1,43 @@
 import styles from "./Sidebar.module.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebarContent}>
-        <Link to={"/"} className={`${styles.linkText} `}>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? `${styles.linkText} ${styles.activeLink}`
+              : `${styles.linkText}`
+          }
+        >
+          {" "}
           Home
-        </Link>
-
-        <Link to={"/feed"} className={`${styles.linkText} `}>
+        </NavLink>
+        <NavLink
+          to="/feed"
+          className={({ isActive }) =>
+            isActive
+              ? `${styles.linkText} ${styles.activeLink}`
+              : `${styles.linkText}`
+          }
+        >
+          {" "}
           Feed
-        </Link>
-
-        <Link to={"/profile"} className={`${styles.linkText} `}>
+        </NavLink>
+        <NavLink
+          to="/profile"
+          className={({ isActive }) =>
+            isActive
+              ? `${styles.linkText} ${styles.activeLink}`
+              : `${styles.linkText}`
+          }
+        >
+          {" "}
           Profile
-        </Link>
+        </NavLink>
         {/* <Link to="/">Home</Link> */}
         {/* <p>Home</p>
         <p>Home</p>
